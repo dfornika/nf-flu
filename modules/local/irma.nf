@@ -34,6 +34,7 @@ process IRMA {
   if [ ${params.keep_ref_deletions} ]; then
     echo 'DEL_TYPE="NNN"' >> irma_config.sh
     echo 'ALIGN_PROG="BLAT"' >> irma_config.sh
+    echo 'ALLOW_TMP="0"' >> irma_config.sh
   fi
 
   IRMA $irma_module $reads $meta.id
